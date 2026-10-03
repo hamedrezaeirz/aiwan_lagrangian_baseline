@@ -1,0 +1,59 @@
+Loaded 4320 A/B/C rows (20 seeds), 1080 D rows (20 seeds).
+
+=== per-cell means, condition = override_w8: violation A/B/C/D | success A/B/C/D ===
+  net=16    budget=10000   violation 0.939 0.000 0.000 0.912 | success 0.013 0.448 0.208 0.035
+  net=16    budget=100000  violation 0.619 0.000 0.000 0.550 | success 0.413 0.925 0.927 0.499
+  net=16    budget=500000  violation 0.446 0.000 0.001 0.385 | success 0.590 0.969 0.961 0.668
+  net=256   budget=10000   violation 0.749 0.000 0.000 0.891 | success 0.021 0.275 0.227 0.107
+  net=256   budget=100000  violation 0.713 0.000 0.010 0.450 | success 0.318 0.859 0.838 0.584
+  net=256   budget=500000  violation 0.461 0.000 0.002 0.393 | success 0.569 0.952 0.944 0.660
+  net=2048  budget=10000   violation 0.757 0.000 0.000 0.880 | success 0.013 0.282 0.229 0.104
+  net=2048  budget=100000  violation 0.751 0.000 0.001 0.550 | success 0.300 0.754 0.748 0.501
+  net=2048  budget=500000  violation 0.492 0.000 0.002 0.419 | success 0.550 0.911 0.898 0.644
+
+=== per-cell paired tests at override_w8: D minus reference (positive = D higher) ===
+  net=16    budget=10000   D-A violati -0.027  t(19)=-0.80, p=0.432
+  net=16    budget=10000   D-A success +0.022  t(19)=4.66, p=0.000172
+  net=16    budget=10000   D-C violati +0.912  t(19)=55.40, p=1.79e-22
+  net=16    budget=10000   D-C success -0.173  t(19)=-3.71, p=0.00147
+  net=16    budget=100000  D-A violati -0.069  t(19)=-5.26, p=4.46e-05
+  net=16    budget=100000  D-A success +0.086  t(19)=5.78, p=1.43e-05
+  net=16    budget=100000  D-C violati +0.550  t(19)=66.17, p=6.24e-24
+  net=16    budget=100000  D-C success -0.428  t(19)=-23.12, p=2.24e-15
+  net=16    budget=500000  D-A violati -0.061  t(19)=-8.98, p=2.89e-08
+  net=16    budget=500000  D-A success +0.078  t(19)=9.57, p=1.06e-08
+  net=16    budget=500000  D-C violati +0.384  t(19)=162.92, p=2.37e-31
+  net=16    budget=500000  D-C success -0.293  t(19)=-23.55, p=1.6e-15
+  net=256   budget=10000   D-A violati +0.142  t(19)=2.57, p=0.0187
+  net=256   budget=10000   D-A success +0.086  t(19)=12.40, p=1.5e-10
+  net=256   budget=10000   D-C violati +0.891  t(19)=82.32, p=9.99e-26
+  net=256   budget=10000   D-C success -0.120  t(19)=-3.70, p=0.00152
+  net=256   budget=100000  D-A violati -0.263  t(19)=-14.68, p=8.04e-12
+  net=256   budget=100000  D-A success +0.266  t(19)=14.16, p=1.51e-11
+  net=256   budget=100000  D-C violati +0.441  t(19)=50.82, p=9.14e-22
+  net=256   budget=100000  D-C success -0.254  t(19)=-6.58, p=2.68e-06
+  net=256   budget=500000  D-A violati -0.067  t(19)=-6.37, p=4.15e-06
+  net=256   budget=500000  D-A success +0.091  t(19)=13.03, p=6.39e-11
+  net=256   budget=500000  D-C violati +0.392  t(19)=48.53, p=2.19e-21
+  net=256   budget=500000  D-C success -0.283  t(19)=-19.88, p=3.56e-14
+  net=2048  budget=10000   D-A violati +0.123  t(19)=2.06, p=0.0535
+  net=2048  budget=10000   D-A success +0.091  t(19)=12.58, p=1.16e-10
+  net=2048  budget=10000   D-C violati +0.880  t(19)=61.20, p=2.73e-23
+  net=2048  budget=10000   D-C success -0.126  t(19)=-3.55, p=0.00212
+  net=2048  budget=100000  D-A violati -0.201  t(19)=-7.08, p=9.8e-07
+  net=2048  budget=100000  D-A success +0.201  t(19)=6.32, p=4.57e-06
+  net=2048  budget=100000  D-C violati +0.550  t(19)=30.59, p=1.26e-17
+  net=2048  budget=100000  D-C success -0.247  t(19)=-5.96, p=9.69e-06
+  net=2048  budget=500000  D-A violati -0.073  t(19)=-3.16, p=0.00511
+  net=2048  budget=500000  D-A success +0.095  t(19)=5.50, p=2.64e-05
+  net=2048  budget=500000  D-C violati +0.418  t(19)=28.26, p=5.49e-17
+  net=2048  budget=500000  D-C success -0.254  t(19)=-6.83, p=1.61e-06
+
+=== Architecture D, `standard` condition per cell: violation | success ===
+  net=16    [(np.float64(0.761), np.float64(0.018)), (np.float64(0.713), np.float64(0.33)), (np.float64(0.401), np.float64(0.639))]
+  net=256   [(np.float64(0.945), np.float64(0.029)), (np.float64(0.47), np.float64(0.57)), (np.float64(0.398), np.float64(0.656))]
+  net=2048  [(np.float64(0.932), np.float64(0.039)), (np.float64(0.526), np.float64(0.521)), (np.float64(0.411), np.float64(0.648))]
+Saved results/oversight_D_vs_budget_w8.png
+Saved results/oversight_D_vs_w_largest.png
+
+Read violation_rate together with success_rate; nothing above is pooled across cells.

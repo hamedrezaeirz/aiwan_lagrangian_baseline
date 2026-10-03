@@ -1,0 +1,59 @@
+Loaded 2160 A/B/C rows (10 seeds), 540 D rows (10 seeds).
+
+=== per-cell means, condition = override_w8: crash A/B/C/D | success A/B/C/D ===
+  net=16    budget=10000   crash 0.972 0.416 0.000 0.982 | success 0.019 0.033 0.030 0.019
+  net=16    budget=100000  crash 0.003 0.344 0.008 0.004 | success 0.706 0.140 0.976 0.997
+  net=16    budget=500000  crash 0.000 0.324 0.000 0.001 | success 0.721 0.146 0.804 1.000
+  net=256   budget=10000   crash 0.904 0.420 0.008 0.941 | success 0.020 0.033 0.037 0.068
+  net=256   budget=100000  crash 0.103 0.343 0.022 0.008 | success 0.200 0.124 0.647 0.992
+  net=256   budget=500000  crash 0.061 0.313 0.001 0.001 | success 0.218 0.163 0.349 1.000
+  net=2048  budget=10000   crash 0.927 0.408 0.017 0.928 | success 0.030 0.033 0.038 0.081
+  net=2048  budget=100000  crash 0.107 0.347 0.057 0.005 | success 0.491 0.134 0.703 0.994
+  net=2048  budget=500000  crash 0.117 0.320 0.008 0.001 | success 0.415 0.169 0.399 1.000
+
+=== per-cell paired tests at override_w8: D minus reference (positive = D higher) ===
+  net=16    budget=10000   D-A crash_r +0.010  t(9)=1.86, p=0.096
+  net=16    budget=10000   D-A success +0.001  t(9)=0.24, p=0.817
+  net=16    budget=10000   D-C crash_r +0.982  t(9)=529.12, p=1.57e-21
+  net=16    budget=10000   D-C success -0.010  t(9)=-2.60, p=0.0289
+  net=16    budget=100000  D-A crash_r +0.001  t(9)=0.43, p=0.678
+  net=16    budget=100000  D-A success +0.291  t(9)=1.97, p=0.0799
+  net=16    budget=100000  D-C crash_r -0.004  t(9)=-0.94, p=0.373
+  net=16    budget=100000  D-C success +0.021  t(9)=1.35, p=0.209
+  net=16    budget=500000  D-A crash_r +0.001  t(9)=1.00, p=0.343
+  net=16    budget=500000  D-A success +0.279  t(9)=1.96, p=0.0819
+  net=16    budget=500000  D-C crash_r +0.001  t(9)=1.00, p=0.343
+  net=16    budget=500000  D-C success +0.195  t(9)=1.55, p=0.156
+  net=256   budget=10000   D-A crash_r +0.037  t(9)=2.30, p=0.0473
+  net=256   budget=10000   D-A success +0.047  t(9)=5.42, p=0.00042
+  net=256   budget=10000   D-C crash_r +0.932  t(9)=108.38, p=2.46e-15
+  net=256   budget=10000   D-C success +0.031  t(9)=3.36, p=0.00833
+  net=256   budget=100000  D-A crash_r -0.095  t(9)=-1.36, p=0.208
+  net=256   budget=100000  D-A success +0.791  t(9)=8.21, p=1.79e-05
+  net=256   budget=100000  D-C crash_r -0.014  t(9)=-2.09, p=0.0662
+  net=256   budget=100000  D-C success +0.344  t(9)=3.07, p=0.0134
+  net=256   budget=500000  D-A crash_r -0.060  t(9)=-1.66, p=0.131
+  net=256   budget=500000  D-A success +0.781  t(9)=8.05, p=2.12e-05
+  net=256   budget=500000  D-C crash_r -0.001  t(9)=-0.56, p=0.591
+  net=256   budget=500000  D-C success +0.650  t(9)=4.63, p=0.00124
+  net=2048  budget=10000   D-A crash_r +0.000  t(9)=0.03, p=0.979
+  net=2048  budget=10000   D-A success +0.051  t(9)=5.60, p=0.000335
+  net=2048  budget=10000   D-C crash_r +0.911  t(9)=95.55, p=7.64e-15
+  net=2048  budget=10000   D-C success +0.042  t(9)=4.12, p=0.0026
+  net=2048  budget=100000  D-A crash_r -0.101  t(9)=-1.49, p=0.172
+  net=2048  budget=100000  D-A success +0.504  t(9)=3.51, p=0.00662
+  net=2048  budget=100000  D-C crash_r -0.052  t(9)=-1.76, p=0.112
+  net=2048  budget=100000  D-C success +0.291  t(9)=2.55, p=0.031
+  net=2048  budget=500000  D-A crash_r -0.116  t(9)=-1.46, p=0.179
+  net=2048  budget=500000  D-A success +0.585  t(9)=4.22, p=0.00224
+  net=2048  budget=500000  D-C crash_r -0.008  t(9)=-1.17, p=0.273
+  net=2048  budget=500000  D-C success +0.601  t(9)=4.25, p=0.00214
+
+=== Architecture D, `standard` condition per cell: crash | success ===
+  net=16    [(np.float64(0.983), np.float64(0.016)), (np.float64(0.336), np.float64(0.532)), (np.float64(0.0), np.float64(0.807))]
+  net=256   [(np.float64(0.984), np.float64(0.018)), (np.float64(0.012), np.float64(0.988)), (np.float64(0.0), np.float64(1.0))]
+  net=2048  [(np.float64(0.981), np.float64(0.02)), (np.float64(0.04), np.float64(0.962)), (np.float64(0.0), np.float64(1.0))]
+Saved results/battery_D_vs_budget_w8.png
+Saved results/battery_D_vs_w_largest.png
+
+Read crash_rate together with success_rate; nothing above is pooled across cells.

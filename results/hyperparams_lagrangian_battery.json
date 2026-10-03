@@ -1,0 +1,7 @@
+{
+  "learning_rate": 0.0003,
+  "gamma": 0.99,
+  "log_std_init": -0.5,
+  "lagrangian_eta": 0.01,
+  "lagrangian_d_threshold": 0.05
+}
